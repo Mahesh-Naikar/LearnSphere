@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add Lesson</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+<div class="container">
+    <form action="addLessons" method="post">
+        <h1>Add Lesson</h1>
+
+        <label>Course ID:</label>
+        <select name="course.courseId">
+            <option value="" selected disabled>Select Course</option>
+            <option th:each="course : ${courses}" th:value="${course.courseId}">
+               <span th:text="${course.courseId}"></span> - <span th:text="${course.courseName}"></span>
+            </option>
+        </select><br><br>
+
+        <label>Lesson ID:</label>
+        <input type="text" name="lessonId"><br><br>
+
+        <label>Lesson Name:</label>
+        <input type="text" name="lessonName"><br><br>
+
+        <label>Lesson Video:</label>
+        <input type="text" name="link"><br><br>
+
+        <label>Lesson Topics:</label>
+        <input type="text" name="topics"><br><br>
+
+        <button>Add Lesson</button>
+    </form>
+</div>
+
+</body>
+</html>

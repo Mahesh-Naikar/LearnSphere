@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Lessons</title>
+    <link rel="stylesheet" th:href="@{/css/allLessons.css}">
+</head>
+<body>
+
+    <h1>All Lessons :</h1>
+    <div class="container">
+       <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Topics</th>
+                <th>Video</th>
+            </tr>
+            <tr th:each="lesson : ${lessons}">
+                <td th:text="${lesson.lessonId}"></td>
+                <td th:text="${lesson.lessonName}"></td>
+                <td th:text="${lesson.topics}"></td>
+                <td>
+                    <video width="560" height="315" controls>
+                        <source th:src="${lesson.link}" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+       </table>
+    </div>
+
+</body>
+</html>
