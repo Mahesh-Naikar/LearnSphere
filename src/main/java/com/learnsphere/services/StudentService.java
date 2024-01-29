@@ -7,8 +7,6 @@ import com.learnsphere.entity.Lesson;
 
 public interface StudentService {
 	
-	Lesson getLesson(int lessonId);
-	
 	List<Course> getMyCourses(String email);
 
 }

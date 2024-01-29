@@ -16,12 +16,6 @@ public class StudentServiceImplementation implements StudentService{
 	@Autowired
 	UserRepository userRepository;
 	
-	@Override
-	public Lesson getLesson(int lessonId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 	public List<Course> getMyCourses(String email) {
         Users user = userRepository.findByEmail(email);
         return user.getCourses();
