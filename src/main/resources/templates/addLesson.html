@@ -3,12 +3,33 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Add Lesson</title>
-    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="stylesheet" th:href="@{/css/common.css}">
 </head>
 <body>
+<header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="index">LearnSphere</a>
+      </div>
+      
+      <ul>
+        <li><a href="trainerHome" class="active" >Home</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
 
-<div class="container">
-    <form action="addLessons" method="post">
+
+<div class="container1">
+<div class="sidebar">
+      <h3>Trainer Home</h3>
+      <a href="trainerHome" >Home</a>
+      <a href="createCourse">➕ Add Course</a>
+      <a href="addLesson" class="active">📝 Add Lesson</a>
+      <a href="viewAllCourses">👀 View All Courses</a>
+    </div>
+<div class="container2">
+    <form class="addForm" action="addLessons" method="post">
         <h1>Add Lesson</h1>
 
         <label>Course ID:</label>
@@ -33,6 +54,7 @@
 
         <button>Add Lesson</button>
     </form>
+    </div>
 </div>
 
 </body>

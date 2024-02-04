@@ -17,22 +17,36 @@
 </head>
 <body>
 
-    <h1>All Courses : </h1>
-    <div class="container">
-       <table>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th></th>
-            </tr>
-            <tr th:each="course : ${courses}">
-                <td th:text="${course.courseId}"></td>
-                <td th:text="${course.courseName}"></td>
-                <td th:text="${course.coursePrice}"></td>
-                <td><a href="#" class="viewLessons-button" th:data-courseid="${course.courseId}"><button>View Lessons</button></a></td>
-            </tr>
-       </table>
+<header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="index">LearnSphere</a>
+      </div>
+      
+      <ul>
+        <li><a href="trainerHome" class="active" >Home</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+    <div class="container1">
+    <div class="sidebar">
+      <h3>Trainer Home</h3>
+      <a href="trainerHome">Home</a>
+      <a href="createCourse">➕ Add Course</a>
+      <a href="addLesson">📝 Add Lesson</a>
+      <a href="viewAllCourses" class="active">👀 View All Courses</a>
+    </div>
+    <div class="container2">
+       <div class="courses" th:each="course : ${courses}">
+            <div class="course-card">
+                <h2 th:text="${course.courseName}"></h2>
+                <p><strong>ID:</strong> <span th:text="${course.courseId}"></span></p>
+                <p><strong>Price:   ₹</strong><span th:text="${course.coursePrice}"></span></p>
+                <a href="#" class="viewLessons-button" th:data-courseid="${course.courseId}">View Lessons</a>
+            </div>
+       </div>
+    </div>
     </div>
 
 </body>

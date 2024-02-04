@@ -1,23 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Trainer Home</title>
-<link rel="stylesheet" th:href="@{/css/trainerHome.css}">
+  <meta charset="ISO-8859-1">
+  <title>Trainer Home</title>
+  <link rel="stylesheet" th:href="@{/css/trainerHome.css}">
 </head>
 <body>
-
-<div class="navbar">
-    <a href="logout">Logout</a>
-</div>
-<div class="container"> 
-    <div class="trainer">
-       <h1>Trainer Home</h1>
-       <a href="createCourse"><button>Add Course</button></a><br>
-       <a href="addLesson"><button>Add Lesson</button></a><br>
-       <a href="viewAllCourses"><button>View All Courses</button></a><br>
+  <header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="index">LearnSphere</a>
+      </div>
+      
+      <ul>
+        <li><a href="trainerHome" class="active" >Home</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
     </div>
-</div>
+  </header>
 
+  <div class="container1"> 
+    <div class="sidebar">
+      <h3>Trainer Home</h3>
+      <a href="trainerHome" class="active">Home</a>
+      <a href="createCourse">➕ Add Course</a>
+      <a href="addLesson">📝 Add Lesson</a>
+      <a href="viewAllCourses">👀 View All Courses</a>
+    </div>
+
+    <div class="admin">
+      <h1>📚 Trainer's Hub</h1>
+      <p>Welcome, Trainer! This is your hub for managing courses and lessons. Let's create a valuable learning experience together! 🚀</p>
+
+      <h2>🔍 Courses Overview</h2>
+      <p>Explore the courses you've created, add new ones, and manage lessons to empower learners on their educational journey. 📖</p>
+
+      <h2>🌟 Trainer Resources</h2>
+      <p>As a trainer, we understand the need for resources to aid in your teaching. Check out our library of resources, including teaching guides, lesson plan templates, and more.</p>
+      <a href="trainerResources">View Trainer Resources</a>
+
+      <h2>📈 Performance Dashboard</h2>
+      <p>Keep track of your performance and get insights on your courses. Understand your learners better with our analytics.</p>
+      <a href="performanceDashboard">Go to Dashboard</a>
+    </div>
+  </div>
 </body>
 </html>

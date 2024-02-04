@@ -34,4 +34,25 @@ public class NavController {
 		model.addAttribute("courses", courseList);
         return "addLesson";
     }
+	
+	
+	
+	///////////////--------------
+	@GetMapping("/trainerHome")
+    public String trainerHome() {
+        return "trainerHome";
+    }
+	@GetMapping("/studentHome")
+    public String studentHome() {
+        return "studentHome";
+    }
+	@GetMapping("/index")
+    public String Home() {
+        return "index";
+    }
+	@GetMapping("/forgotPassword")
+    public String forgotPassword() {
+        return "resetPassword";
+    }
+	
 }

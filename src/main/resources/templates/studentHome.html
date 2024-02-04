@@ -2,20 +2,49 @@
 <html xmlns:th="www.thymleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Student</title>
-<link rel="stylesheet" th:href="@{/css/studentHome.css}">
+<title>Student Home</title>
+<link rel="stylesheet" th:href="@{/css/trainerHome.css}">
 </head>
 <body>
   
-   <div class="navbar">
-     <a href="logout">Logout</a>
-   </div> 
-   <div class="container2">
-       <div class="customer2">
-          <h1>Student Home</h1>
-          <a href="pay"><button>Buy Courses</button></a><br>
-          <a href="myCourses"><button>My Courses</button></a>
+    <header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="index">LearnSphere</a>
+      </div>
+      
+      <ul>
+        <li><a href="studentHome" class="active" >Home</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+   <div class="container1">
+   
+   <div class="sidebar">
+      <h3>Student Home</h3>
+      <a href="studentHome" class="active">Home</a>
+      <a href="pay">Buy Courses</a>
+      <a href="myCourses">My Courses</a>
+      <a href="studentResources">👀 View Resources</a>
+    </div>
+    
+       <div class="admin">
+          <h1>Welcome, Student!</h1>
+          <p>This is your Student Home page. Here, you can explore and buy courses, view your enrolled courses, and manage your learning journey.</p>
+
+          <h2>🔍 Courses Overview</h2>
+          <p>Explore our wide range of courses and find the ones that suit your learning goals. Let's make learning an exciting journey together! 🚀</p>
+          <a href="pay">Buy Courses</a><br>
+
+          <h2>📚 My Courses</h2>
+          <p>View all the courses you've enrolled in. Continue your learning journey from where you left off.</p>
+          <a href="myCourses">My Courses</a>
+
+          <h2>🌟 Student Resources</h2>
+          <p>As a student, we understand the need for resources to aid in your learning. Check out our library of resources, including study guides, templates, and more.</p>
+          <a href="studentResources">View Resources</a>
        </div>
     </div>
 </body>
-</html> 
+</html>

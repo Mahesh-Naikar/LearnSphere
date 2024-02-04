@@ -7,26 +7,31 @@
 </head>
 <body>
 
-    <h1>All Lessons :</h1>
-    <div class="container">
-       <table>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Topics</th>
-                <th>Video</th>
-            </tr>
-            <tr th:each="lesson : ${lessons}">
-                <td th:text="${lesson.lessonId}"></td>
-                <td th:text="${lesson.lessonName}"></td>
-                <td th:text="${lesson.topics}"></td>
-                <td>
+<header class="container">
+    <div class="page-header">
+      <div class="logo">
+        <a href="index">LearnSphere</a>
+      </div>
+      
+      <ul>
+        <li><a href="index" class="active" >Home</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <div class="container1">
+       <div class="lessons" th:each="lesson : ${lessons}">
+            <div class="lesson-card">
+                <h2 th:text="${lesson.lessonName}"></h2>
+                <p><strong>Topics:</strong> <span th:text="${lesson.topics}"></span></p>
+                <div class="video">
                     <video width="560" height="315" controls>
                         <source th:src="${lesson.link}" type="video/mp4">
                     </video>
-                </td>
-            </tr>
-       </table>
+                </div>
+            </div>
+       </div>
     </div>
 
 </body>
