@@ -195,3 +195,19 @@ ul li a:hover {
   overflow: auto;
   height: 80vh; 
 }
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1666b0;
+     border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+     border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+	height:5px;
+}

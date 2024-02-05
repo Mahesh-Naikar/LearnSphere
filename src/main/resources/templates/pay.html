@@ -31,7 +31,7 @@
       <a href="studentHome" >Home</a>
       <a href="pay" class="active">Buy Courses</a>
       <a href="myCourses">My Courses</a>
-      <a href="studentResources">👀 View Resources</a>
+      <a href="#">👀 View Resources</a>
     </div>
 
 	<form id="payment-form">
@@ -41,7 +41,7 @@
                 <h2 th:text="${course.courseName}"></h2>
                 <p><strong>ID:</strong> <span th:text="${course.courseId}"></span></p>
                 <p><strong>Price:   ₹</strong><span th:text="${course.coursePrice}"></span></p>
-                <a href="#" class="viewLessons-button" th:data-courseid="${course.courseId}">View Lessons</a>
+                <a href="#" class="buy-button" th:data-courseid="${course.courseId}" >Buy</a>
             </div>
        </div>
     </div>
